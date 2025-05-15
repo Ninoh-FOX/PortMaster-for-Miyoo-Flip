@@ -1,0 +1,46 @@
+#!/bin/bash
+
+export SDCARD_PATH="/mnt/SDCARD"
+export HOME="${SDCARD_PATH}"
+export SWAPFILE="${SDCARD_PATH}/cachefile"
+export PATH="/mnt/SDCARD/miyoo355/bin:/usr/miyoo/bin:/usr/bin:/usr/sbin"
+export LD_LIBRARY_PATH="/mnt/SDCARD/miyoo355/lib:/usr/miyoo/lib:/usr/lib"
+export USER=root
+
+mount -o bind /mnt/SDCARD/miyoo355/app/profile /etc/profile
+
+#set cores
+#enable core 1, disable 0.
+echo 1 > /sys/devices/system/cpu/cpu0/online
+echo 1 > /sys/devices/system/cpu/cpu1/online
+echo 1 > /sys/devices/system/cpu/cpu3/online
+echo 1 > /sys/devices/system/cpu/cpu2/online
+
+# check swap size
+if [ -f "${SWAPFILE}" ]; then
+SWAPSIZE=$(ls -l "${SWAPFILE}" | awk '{print $5}')
+MINSIZE=$((512 * 1024 * 1024))
+
+if [ "$SWAPSIZE" -ne "$MINSIZE" ]; then
+	rm "${SWAPFILE}"
+fi
+fi
+
+# Enable swap
+if [ ! -f "${SWAPFILE}" ]; then
+	dd if=/dev/zero of="${SWAPFILE}" bs=1M count=512
+	mkswap "${SWAPFILE}"
+	sync
+fi
+
+if [ ! -f "/tmp/swapfileon" ]; then
+    swapon "${SWAPFILE}"
+	echo 10 > /proc/sys/vm/swappiness
+	touch /tmp/swapfileon
+	sync
+fi
+
+keykill MainUI
+#run launcher
+/usr/miyoo/bin/MainUI
+sync

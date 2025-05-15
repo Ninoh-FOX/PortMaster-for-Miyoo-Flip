@@ -1,0 +1,6 @@
+{
+    "label":"PortMaster",
+    "icon":"portmaster.png",
+    "launch":"launch.sh",
+    "description":"A simple GUI tool for download game ports"
+}

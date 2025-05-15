@@ -1,0 +1,22 @@
+2025-05-14 11:41:19.911 | DEBUG    | harbourmaster.config:<module>:43 - HM_DEFAULT_TOOLS_DIR:   /mnt/SDCARD/Roms/PORTS
+2025-05-14 11:41:19.914 | DEBUG    | harbourmaster.config:<module>:44 - HM_DEFAULT_PORTS_DIR:   /mnt/SDCARD/Roms/PORTS
+2025-05-14 11:41:19.916 | DEBUG    | harbourmaster.config:<module>:45 - HM_DEFAULT_SCRIPTS_DIR: /mnt/SDCARD/Roms/PORTS
+arm_release_ver of this libmali is 'g2p0-01eac0', rk_so_ver is '3'.arm_release_ver of this libmali is 'g2p0-01eac0', rk_so_ver is '3'.arm_release_ver of this libmali is 'g2p0-01eac0', rk_so_ver is '3'.arm_release_ver of this libmali is 'g2p0-01eac0', rk_so_ver is '3'.Attempting to delete file at path: /mnt/SDCARD/Roms/PORTS/PortMaster/utils/pmsplash/stopsplash
+File 'stopsplash' deleted successfully.
+ERROR: Could not restore CRTC
+0: 1
+{'name': 'Miyoo', 'version': '20250509213001', 'device': 'miyoo-flip', 'resolution': (640, 480), 'analogsticks': 2, 'cpu': 'rk3566', 'capabilities': ['power', 'opengl', 'aarch64', 'restore', '4:3', '640x480', 'Miyoo', 'miyoo-flip', 'analog_0', 'analog_1', 'analog_2', '1gb', 'es_ES'], 'ram': 1024, 'primary_arch': 'aarch64', 'glibc': '2.36'}
+XBOX FIXER
+arm_release_ver of this libmali is 'g2p0-01eac0', rk_so_ver is '3'.2025-05-14 11:42:32.149 | DEBUG    | harbourmaster.config:<module>:43 - HM_DEFAULT_TOOLS_DIR:   /mnt/SDCARD/Roms/PORTS
+2025-05-14 11:42:32.152 | DEBUG    | harbourmaster.config:<module>:44 - HM_DEFAULT_PORTS_DIR:   /mnt/SDCARD/Roms/PORTS
+2025-05-14 11:42:32.154 | DEBUG    | harbourmaster.config:<module>:45 - HM_DEFAULT_SCRIPTS_DIR: /mnt/SDCARD/Roms/PORTS
+0: 1
+{'name': 'Miyoo', 'version': '20250509213001', 'device': 'miyoo-flip', 'resolution': (640, 480), 'analogsticks': 2, 'cpu': 'rk3566', 'capabilities': ['power', 'opengl', 'aarch64', 'restore', '4:3', '640x480', 'Miyoo', 'miyoo-flip', 'analog_0', 'analog_1', 'analog_2', '1gb', 'es_ES'], 'ram': 1024, 'primary_arch': 'aarch64', 'glibc': '2.36'}
+XBOX FIXER
+-> /mnt/SDCARD/Roms/PORTS/sonictimetwisted/port.json
+-> /mnt/SDCARD/Roms/PORTS/f-zeropocket/port.json
+-> /mnt/SDCARD/Roms/PORTS/romm/port.json
+-> /mnt/SDCARD/Roms/PORTS/pipflipparadise/port.json
+REPEAT DOWN 30
+-> /mnt/SDCARD/Roms/PORTS/balatro/port.json
+arm_release_ver of this libmali is 'g2p0-01eac0', rk_so_ver is '3'.

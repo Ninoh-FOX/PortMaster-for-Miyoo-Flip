@@ -1,0 +1,121 @@
+2025-05-10 09:53:51.973 | INFO     | __main__:__init__:531 - PM: 2025.05.08-1120
+2025-05-10 09:53:51.977 | INFO     | __main__:__init__:532 - HM: 2024-02-27
+2025-05-10 09:53:51.980 | INFO     | __main__:__init__:533 - SDL DLL: /mnt/SDCARD/miyoo355/lib/libSDL2-2.0.so,  2.32.6
+2025-05-10 09:53:51.983 | INFO     | __main__:__init__:534 - TTF DLL: /mnt/SDCARD/miyoo355/lib/libSDL2_ttf-2.0.so, 2.0.18
+2025-05-10 09:53:51.986 | INFO     | __main__:__init__:535 - IMG DLL: /mnt/SDCARD/miyoo355/lib/libSDL2_image-2.0.so, 2.8.8
+2025-05-10 09:53:51.988 | INFO     | __main__:__init__:536 - MIX DLL: /mnt/SDCARD/miyoo355/lib/libSDL2_mixer-2.0.so, 2.0.4
+2025-05-10 09:53:51.991 | INFO     | __main__:__init__:537 - HM_TESTING: False
+2025-05-10 09:53:51.994 | INFO     | __main__:__init__:547 - Opened GameController 0: b'X360 Controller'
+2025-05-10 09:53:51.996 | INFO     | __main__:__init__:548 -  b'0300976a5e0400008e02000014010000,X360 Controller,a:b0,b:b1,back:b6,dpdown:h0.4,dpleft:h0.8,dpright:h0.2,dpup:h0.1,guide:b8,leftshoulder:b4,leftstick:b9,lefttrigger:a2,leftx:a0,lefty:a1,rightshoulder:b5,rightstick:b10,righttrigger:a5,rightx:a3,righty:a4,start:b7,x:b2,y:b3,platform:Linux'
+2025-05-10 09:53:52.068 | INFO     | harbourmaster.hardware:new_device_info:495 - {'name': 'Miyoo', 'version': '20250228101926', 'device': 'miyoo-flip'}
+2025-05-10 09:53:52.079 | INFO     | harbourmaster.hardware:device_info:698 - DEVICE INFO: {'name': 'Miyoo', 'version': '20250228101926', 'device': 'miyoo-flip', 'resolution': (640, 480), 'analogsticks': 2, 'cpu': 'rk3566', 'capabilities': ['power', 'aarch64', 'restore', '4:3', '640x480', 'Miyoo', 'miyoo-flip', 'analog_0', 'analog_1', 'analog_2', '1gb'], 'ram': 1024, 'primary_arch': 'aarch64', 'glibc': '2.36'}
+2025-05-10 09:53:52.081 | INFO     | __main__:__init__:568 - Display size: 640x480
+2025-05-10 09:53:52.083 | INFO     | __main__:__init__:609 - {'name': 'Miyoo', 'version': '20250228101926', 'device': 'miyoo-flip', 'resolution': (640, 480), 'analogsticks': 2, 'cpu': 'rk3566', 'capabilities': ['power', 'aarch64', 'restore', '4:3', '640x480', 'Miyoo', 'miyoo-flip', 'analog_0', 'analog_1', 'analog_2', '1gb', 'en_US'], 'ram': 1024, 'primary_arch': 'aarch64', 'glibc': '2.36'}
+2025-05-10 09:53:52.311 | INFO     | pugtheme:theme_load:130 - Loading theme /mnt/SDCARD/Roms/PORTS/PortMaster/pylibs/default_theme/theme.json
+2025-05-10 09:53:55.055 | INFO     | __main__:portmaster_check_update:1897 - Checking for updates: 2025.05.08-1120 vs 2025.05.08-1120
+2025-05-10 09:53:55.387 | ERROR    | __main__:<module>:2083 - An error has been caught in function '<module>', process 'MainProcess' (1429), thread 'MainThread' (548572483616):
+Traceback (most recent call last):
+
+> File "/mnt/SDCARD/Roms/PORTS/PortMaster/./pugwash", line 2083, in <module>
+    exit(main(sys.argv))
+         │    │   └ ['./pugwash']
+         │    └ <module 'sys' (built-in)>
+         └ <function main at 0x7fb7125e40>
+  File "/mnt/SDCARD/Roms/PORTS/PortMaster/./pugwash", line 2053, in main
+    pm.hm = HarbourMaster(config, temp_dir=temp_dir, callback=pm)
+    │  │    │             │                │                  └ <__main__.PortMasterGUI object at 0x7fb70a9390>
+    │  │    │             │                └ PosixPath('/tmp/tmp_5hkaibj')
+    │  │    │             └ {'quiet': False, 'no-check': False, 'debug': False, 'no-colour': False, 'force-colour': False, 'no-log': False, 'help': False...
+    │  │    └ <class 'harbourmaster.harbour.HarbourMaster'>
+    │  └ None
+    └ <__main__.PortMasterGUI object at 0x7fb70a9390>
+
+  File "/mnt/SDCARD/Roms/PORTS/PortMaster/pylibs/harbourmaster/harbour.py", line 140, in __init__
+    self.platform.first_run()
+    │    │        └ <function PlatformMiyoo.first_run at 0x7fb782c4a0>
+    │    └ <harbourmaster.platform.PlatformMiyoo object at 0x7fb70ca590>
+    └ <harbourmaster.harbour.HarbourMaster object at 0x7fb7d04610>
+
+  File "/mnt/SDCARD/Roms/PORTS/PortMaster/pylibs/harbourmaster/platform.py", line 994, in first_run
+    self.portmaster_install()
+    │    └ <function PlatformMiyoo.portmaster_install at 0x7fb782c540>
+    └ <harbourmaster.platform.PlatformMiyoo object at 0x7fb70ca590>
+
+  File "/mnt/SDCARD/Roms/PORTS/PortMaster/pylibs/harbourmaster/platform.py", line 1006, in portmaster_install
+    shutil.copy(MY_DIR / "control.txt", PM_DIR / "control.txt")
+    │      │    │                       └ PosixPath('/mnt/SDCARD/Roms/PORTS/PortMaster/PortMaster')
+    │      │    └ PosixPath('/mnt/SDCARD/Roms/PORTS/PortMaster/PortMaster/miyoo')
+    │      └ <function copy at 0x7fb8bd5260>
+    └ <module 'shutil' from '/mnt/SDCARD/miyoo355/lib/python3.11/shutil.py'>
+
+  File "/mnt/SDCARD/miyoo355/lib/python3.11/shutil.py", line 431, in copy
+    copyfile(src, dst, follow_symlinks=follow_symlinks)
+    │        │    │                    └ True
+    │        │    └ PosixPath('/mnt/SDCARD/Roms/PORTS/PortMaster/PortMaster/control.txt')
+    │        └ PosixPath('/mnt/SDCARD/Roms/PORTS/PortMaster/PortMaster/miyoo/control.txt')
+    └ <function copyfile at 0x7fb8bd4fe0>
+  File "/mnt/SDCARD/miyoo355/lib/python3.11/shutil.py", line 256, in copyfile
+    with open(src, 'rb') as fsrc:
+              └ PosixPath('/mnt/SDCARD/Roms/PORTS/PortMaster/PortMaster/miyoo/control.txt')
+
+FileNotFoundError: [Errno 2] No such file or directory: '/mnt/SDCARD/Roms/PORTS/PortMaster/PortMaster/miyoo/control.txt'
+2025-05-10 09:59:27.413 | INFO     | __main__:__init__:531 - PM: 2025.05.08-1120
+2025-05-10 09:59:27.416 | INFO     | __main__:__init__:532 - HM: 2024-02-27
+2025-05-10 09:59:27.418 | INFO     | __main__:__init__:533 - SDL DLL: /mnt/SDCARD/miyoo355/lib/libSDL2-2.0.so,  2.32.6
+2025-05-10 09:59:27.419 | INFO     | __main__:__init__:534 - TTF DLL: /mnt/SDCARD/miyoo355/lib/libSDL2_ttf-2.0.so, 2.0.18
+2025-05-10 09:59:27.421 | INFO     | __main__:__init__:535 - IMG DLL: /mnt/SDCARD/miyoo355/lib/libSDL2_image-2.0.so, 2.8.8
+2025-05-10 09:59:27.422 | INFO     | __main__:__init__:536 - MIX DLL: /mnt/SDCARD/miyoo355/lib/libSDL2_mixer-2.0.so, 2.0.4
+2025-05-10 09:59:27.423 | INFO     | __main__:__init__:537 - HM_TESTING: False
+2025-05-10 09:59:27.426 | INFO     | __main__:__init__:547 - Opened GameController 0: b'X360 Controller'
+2025-05-10 09:59:27.427 | INFO     | __main__:__init__:548 -  b'0300976a5e0400008e02000014010000,X360 Controller,a:b0,b:b1,back:b6,dpdown:h0.4,dpleft:h0.8,dpright:h0.2,dpup:h0.1,guide:b8,leftshoulder:b4,leftstick:b9,lefttrigger:a2,leftx:a0,lefty:a1,rightshoulder:b5,rightstick:b10,righttrigger:a5,rightx:a3,righty:a4,start:b7,x:b2,y:b3,platform:Linux'
+2025-05-10 09:59:27.492 | INFO     | harbourmaster.hardware:new_device_info:495 - {'name': 'Miyoo', 'version': '20250228101926', 'device': 'miyoo-flip'}
+2025-05-10 09:59:27.506 | INFO     | harbourmaster.hardware:device_info:698 - DEVICE INFO: {'name': 'Miyoo', 'version': '20250228101926', 'device': 'miyoo-flip', 'resolution': (640, 480), 'analogsticks': 2, 'cpu': 'rk3566', 'capabilities': ['power', 'aarch64', 'restore', '4:3', '640x480', 'Miyoo', 'miyoo-flip', 'analog_0', 'analog_1', 'analog_2', '1gb'], 'ram': 1024, 'primary_arch': 'aarch64', 'glibc': '2.36'}
+2025-05-10 09:59:27.509 | INFO     | __main__:__init__:568 - Display size: 640x480
+2025-05-10 09:59:27.510 | INFO     | __main__:__init__:609 - {'name': 'Miyoo', 'version': '20250228101926', 'device': 'miyoo-flip', 'resolution': (640, 480), 'analogsticks': 2, 'cpu': 'rk3566', 'capabilities': ['power', 'aarch64', 'restore', '4:3', '640x480', 'Miyoo', 'miyoo-flip', 'analog_0', 'analog_1', 'analog_2', '1gb', 'en_US'], 'ram': 1024, 'primary_arch': 'aarch64', 'glibc': '2.36'}
+2025-05-10 09:59:27.759 | INFO     | pugtheme:theme_load:130 - Loading theme /mnt/SDCARD/Roms/PORTS/PortMaster/pylibs/default_theme/theme.json
+2025-05-10 09:59:28.227 | ERROR    | __main__:<module>:2083 - An error has been caught in function '<module>', process 'MainProcess' (1391), thread 'MainThread' (548033953824):
+Traceback (most recent call last):
+
+> File "/mnt/SDCARD/Roms/PORTS/PortMaster/./pugwash", line 2083, in <module>
+    exit(main(sys.argv))
+         │    │   └ ['./pugwash']
+         │    └ <module 'sys' (built-in)>
+         └ <function main at 0x7f96fbdf80>
+  File "/mnt/SDCARD/Roms/PORTS/PortMaster/./pugwash", line 2053, in main
+    pm.hm = HarbourMaster(config, temp_dir=temp_dir, callback=pm)
+    │  │    │             │                │                  └ <__main__.PortMasterGUI object at 0x7f96f5dc90>
+    │  │    │             │                └ PosixPath('/tmp/tmpmgn83c_7')
+    │  │    │             └ {'quiet': False, 'no-check': False, 'debug': False, 'no-colour': False, 'force-colour': False, 'no-log': False, 'help': False...
+    │  │    └ <class 'harbourmaster.harbour.HarbourMaster'>
+    │  └ None
+    └ <__main__.PortMasterGUI object at 0x7f96f5dc90>
+
+  File "/mnt/SDCARD/Roms/PORTS/PortMaster/pylibs/harbourmaster/harbour.py", line 140, in __init__
+    self.platform.first_run()
+    │    │        └ <function PlatformMiyoo.first_run at 0x7f976ac4a0>
+    │    └ <harbourmaster.platform.PlatformMiyoo object at 0x7f96fef590>
+    └ <harbourmaster.harbour.HarbourMaster object at 0x7f98d1e910>
+
+  File "/mnt/SDCARD/Roms/PORTS/PortMaster/pylibs/harbourmaster/platform.py", line 994, in first_run
+    self.portmaster_install()
+    │    └ <function PlatformMiyoo.portmaster_install at 0x7f976ac540>
+    └ <harbourmaster.platform.PlatformMiyoo object at 0x7f96fef590>
+
+  File "/mnt/SDCARD/Roms/PORTS/PortMaster/pylibs/harbourmaster/platform.py", line 1006, in portmaster_install
+    shutil.copy(MY_DIR / "control.txt", PM_DIR / "control.txt")
+    │      │    │                       └ PosixPath('/mnt/SDCARD/Roms/PORTS/PortMaster/PortMaster')
+    │      │    └ PosixPath('/mnt/SDCARD/Roms/PORTS/PortMaster/PortMaster/miyoo')
+    │      └ <function copy at 0x7f98a35260>
+    └ <module 'shutil' from '/mnt/SDCARD/miyoo355/lib/python3.11/shutil.py'>
+
+  File "/mnt/SDCARD/miyoo355/lib/python3.11/shutil.py", line 431, in copy
+    copyfile(src, dst, follow_symlinks=follow_symlinks)
+    │        │    │                    └ True
+    │        │    └ PosixPath('/mnt/SDCARD/Roms/PORTS/PortMaster/PortMaster/control.txt')
+    │        └ PosixPath('/mnt/SDCARD/Roms/PORTS/PortMaster/PortMaster/miyoo/control.txt')
+    └ <function copyfile at 0x7f98a34fe0>
+  File "/mnt/SDCARD/miyoo355/lib/python3.11/shutil.py", line 256, in copyfile
+    with open(src, 'rb') as fsrc:
+              └ PosixPath('/mnt/SDCARD/Roms/PORTS/PortMaster/PortMaster/miyoo/control.txt')
+
+FileNotFoundError: [Errno 2] No such file or directory: '/mnt/SDCARD/Roms/PORTS/PortMaster/PortMaster/miyoo/control.txt'
