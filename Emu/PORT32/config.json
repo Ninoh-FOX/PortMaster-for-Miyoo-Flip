@@ -1,0 +1,25 @@
+{
+    "label":"PORTS",
+    "icon":"ic-ports.png",
+    "iconsel":"ic-ports-80-n.png",
+    "iconlist":"ic-ports-32-n.png",
+    "background":"bg.png",
+    "themecolor":"DDEEFF",
+    "launch":"launchPM.sh",
+    "rompath":"../../Roms/PORTS",
+    "imgpath":"../../Roms/PORTS/media/images",
+    "useswap":1,
+    "shortname":1,
+    "hidebios":1,
+    "extlist":"sh",
+    "launchlist": [
+	    {
+            "name": "PORTMASTER",
+            "launch": "launchPM.sh"
+        },
+        {
+            "name": "PORT32",
+            "launch": "launch.sh"
+        }
+    ]
+}
