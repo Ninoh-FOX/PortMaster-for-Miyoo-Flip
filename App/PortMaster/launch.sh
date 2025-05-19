@@ -67,6 +67,12 @@ for sh_file in "${sh_folder}"*.sh; do
     if [ -f "${real_dir}/cover.png" ]; then
         cp -v "${real_dir}/cover.png" "$target_png"
         ((success++))
+    elif [ -f "${real_dir}/cover.jpg" ]; then
+        cp -v "${real_dir}/cover.jpg" "$target_png"
+        ((success++))
+    elif [ -f "${real_dir}/screenshot.png" ]; then
+        cp -v "${real_dir}/screenshot.png" "$target_png"
+        ((success++))
     elif [ -f "${real_dir}/screenshot.jpg" ]; then
         cp -v "${real_dir}/screenshot.jpg" "$target_png"
         ((success++))
